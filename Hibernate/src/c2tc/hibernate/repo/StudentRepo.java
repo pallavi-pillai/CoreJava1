@@ -8,4 +8,6 @@ public interface StudentRepo {
 	void startTransaction();
 
 	void endTransaction();
+
+	Student getStudent(int rollno);
 }

@@ -11,10 +11,17 @@ public class StudentApplication {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		StudentService service=new StudentServiceImpl();
-		//To Add value
+		/*//To Add value
 		System.out.println("Enter the details");
 		Student student=new Student(sc.nextInt(),sc.next());
-		service.addStudent(student);
+		service.addStudent(student);*/
+		//retrieve
+		System.out.println("Enter the uid of the student");
+		Student student=new Student();
+		//student.setUid(sc.nextInt());
+		student=service.getStudent(sc.nextInt());
+		System.out.println(student);
+		
 
 	}
 

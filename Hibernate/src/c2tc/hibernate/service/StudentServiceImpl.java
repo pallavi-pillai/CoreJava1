@@ -18,4 +18,10 @@ public class StudentServiceImpl implements StudentService {
 		repo.addStudent(student);
 		repo.endTransaction();
 	}
+
+	@Override
+	public Student getStudent(int rollno) {
+		Student student=repo.getStudent(rollno);
+		return student;
+	}
 }

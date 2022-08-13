@@ -2,9 +2,11 @@ package c2tc.hibernate.entities;
 import javax.persistence.*;
 
 @Entity
+@Table(name="details")
 public class Student {
 	@Id
 	private int uid;
+	@Column(name="student_name")
 	private String name;
 	public int getUid() {
 		return uid;
@@ -22,6 +24,13 @@ public class Student {
 		super();
 		this.uid = uid;
 		this.name = name;
+	}
+	@Override
+	public String toString() {
+		return "Student [uid=" + uid + ", name=" + name + "]";
+	}
+	public Student() {
+		// TODO Auto-generated constructor stub
 	}
 	
 }

@@ -29,6 +29,12 @@ public class StudentRepoImpl implements StudentRepo {
 		manager.getTransaction().commit();
 		
 	}
+
+	@Override
+	public Student getStudent(int rollno) {
+		Student student=manager.find(Student.class, rollno);
+		return null;
+	}
 	
 	
 }

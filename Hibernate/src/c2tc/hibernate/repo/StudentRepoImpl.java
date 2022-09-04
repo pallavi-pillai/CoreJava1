@@ -33,7 +33,20 @@ public class StudentRepoImpl implements StudentRepo {
 	@Override
 	public Student getStudent(int rollno) {
 		Student student=manager.find(Student.class, rollno);
-		return null;
+		return student;
+	}
+
+	@Override
+	public Student updateStudent(Student student) {
+		Student s=manager.merge(student);
+		return s;
+	}
+
+	@Override
+	public void deleteStudent(Student studelete) {
+	manager.remove(studelete);
+		
+		
 	}
 	
 	

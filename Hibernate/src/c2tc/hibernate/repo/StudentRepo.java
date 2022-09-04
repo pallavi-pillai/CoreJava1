@@ -10,4 +10,8 @@ public interface StudentRepo {
 	void endTransaction();
 
 	Student getStudent(int rollno);
+
+	Student updateStudent(Student student);
+
+	void deleteStudent(Student studelete);
 }

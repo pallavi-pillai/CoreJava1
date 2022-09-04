@@ -24,4 +24,20 @@ public class StudentServiceImpl implements StudentService {
 		Student student=repo.getStudent(rollno);
 		return student;
 	}
+
+	@Override
+	public Student updateStudent(Student student) {
+		repo.startTransaction();
+		Student s=repo.updateStudent(student);
+		repo.endTransaction();
+		return s;
+	}
+
+	@Override
+	public void deleteStudent(Student studelete) {
+		repo.startTransaction();
+		repo.deleteStudent(studelete);
+		repo.endTransaction();
+		
+	}
 }

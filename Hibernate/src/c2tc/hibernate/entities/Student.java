@@ -2,12 +2,17 @@ package c2tc.hibernate.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name="details")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@DiscriminatorColumn(name="b18", discriminatorType = DiscriminatorType.STRING)
+@Table(name="details3")
 public class Student {
 	@Id
 	private int uid;
 	@Column(name="student_name")
 	private String name;
+	
+	
+	
 	public int getUid() {
 		return uid;
 	}
